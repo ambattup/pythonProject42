@@ -1,12 +1,11 @@
 
 
-HOW TO REQUEST DATA FROM THE PIE CHART MICROSERVICE:
-- To request data from the microservice, you can send a HTTP POST request to a URL using "requests.post". The request should be sent to an endpoint named after the function used within the flask script which is generate_pie_chart. So, for example, a sample POST request can look like this: response = requests.post('http://127.0.0.1:8080/generate_pie_chart', json=expenditure_data).
-- The json variable comes from you preparing the expenditure data in a JSON format. Just create a list of your data and set it to the variable.
+A. To request data from the microservice you can go about that by sending a POST request to an URL using "requests.post". The URL should be to the endpoint which is the function named generate_password and in my case the URL is 'http://127.0.0.1:5000/generate_password'. An example of a line of code that requests data from the microservice is: response =
+requests.post(url, headers=headers, data=json.dumps(data)).
 
-HOW TO RECEIVE DATA FROM THE PIE CHART MICROSERVICE
-- To receive data from the microservice, all you have to do it click on the URL that is hosting the Flask web server while running your software. After the user indicates that they want to create a pie chart of their expenditures, the post request will create a pie chart within the web server and display it to the user.
+B. The line of code from part 1 will send a POST request to the URL and store the response from that URL in the response variable. The data held in the response variable will be the randomly generated password that was created with the specified length, number of uppercase letters, and number of numbers.
 
-  ![image](https://github.com/ambattup/pythonProject42/assets/122513977/e006b86e-73c0-4450-b3e6-a619bd2c66fa)
+![image](https://github.com/ambattup/pythonProject42/assets/122513977/a2418c0a-5a43-4a63-931d-40aca33d9fb4)
+
 
 
